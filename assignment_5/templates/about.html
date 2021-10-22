@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block header %}
+    <!-- Page Header-->
+        <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/img/about-bg.jpg') }})">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <div class="page-heading">
+                            <h1>关于我们</h1>
+                            <span class="subheading">带你探索不一样的重庆防空洞</span>
+                                    {% include 'messages.html' %} 
+                                     {% if msg %}
+                                       <div class="alert alert-warning" role="alert">{{msg}}</div>
+                                    {% endif %} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+{% endblock %}
+{% block content %}
+        <!-- Main Content-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <p>重庆防空洞简介</p>
+                    <p>网站主要内容</p>
+                </div>
+            </div>
+        </div>
+        <hr />
+{% endblock %}
